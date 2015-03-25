@@ -3,7 +3,7 @@ $ vagrant ssh
 vagrant@lucid64:~$ date
 ```
 
-If `date` is ahowing the wrong timezone:
+If `date` is showing the wrong timezone:
 
 ```console
 vagrant@lucid64:~$ sudo dpkg-reconfigure tzdata
