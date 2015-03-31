@@ -18,7 +18,8 @@ LANG=en_GB.UTF-8
 LC_ALL=en_GB.UTF-8
 
 vagrant@lucid64:~$ sudo dpkg-reconfigure locales
-vagrant@lucid64:~$ sudo reboot now
+vagrant@lucid64:~$ logout
+$ vagrant reload
 ```
 
 ...and if you also need to manually sync time rather than waiting for `ntpd` to drift it:
