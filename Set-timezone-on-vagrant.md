@@ -14,13 +14,10 @@ Universal Time is now:  Tue Jul  9 12:21:14 UTC 2013.
 
 vagrant@lucid64:~$ sudo vim /etc/default/locale
 
-LANG="en_GB"
-LANGUAGE="en_GB:en"
+LANG=en_GB.UTF-8
+LC_ALL=en_GB.UTF-8
 
-vagrant@lucid64:~$ sudo vim /var/lib/locales/supported.d/local
-
-en_GB ISO-8859-1
-
+vagrant@lucid64:~$ sudo dpkg-reconfigure locales
 vagrant@lucid64:~$ sudo reboot now
 ```
 
