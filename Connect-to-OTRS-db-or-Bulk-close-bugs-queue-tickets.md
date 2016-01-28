@@ -1,8 +1,10 @@
 Setup instructions to access OTRS database.
 
 1. Add the following line to your ~/.ssh/config file.
+
 `Host oberon`
 	`LocalForward 9996 localhost:3306`
+
 2. Follow the steps here: http://www.joellipman.com/articles/sql/access-mysql-databases-using-oracle-sql-developer.html
 3. ssh oberon
 4. Add a new connection under sqldeveloper
