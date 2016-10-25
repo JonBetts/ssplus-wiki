@@ -16,7 +16,7 @@
 
 * Log into easyDNS and update the DNS entry.
 
-* On the old server, remove the site's entry in `server.xml` and then `sudo mv /sites/[site] /sites/_old`. You can now start up tomcat on the old server.
+* On the old server, comment out the site's entry in `server.xml` and then `sudo mv /sites/[site] /sites/_old`. You can now start up tomcat on the old server.
 
 * Deploy the relevant version of the app to the new server.
 
