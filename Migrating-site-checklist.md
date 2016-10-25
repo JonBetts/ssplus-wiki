@@ -18,6 +18,8 @@
 
 * On the old server, comment out the site's entry in `server.xml` and then `sudo mv /sites/[site] /sites/_old`. You can now start up tomcat on the old server.
 
+* Amend the `live_config` setting in the sites context file to `true`. (This is by default set to `false` by the site setup script to stop any emails being fired before they should).
+
 * Deploy the relevant version of the app to the new server.
 
 * Pray it all went to plan.
