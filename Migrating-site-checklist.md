@@ -22,4 +22,4 @@
 
 * Pray it all went to plan.
 
-(You may also want to take into consideration any train sites that were on the old server.
+(You may also want to take into consideration any train sites that were on the old server).
