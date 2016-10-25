@@ -10,7 +10,7 @@
 
 * Migrate attachments using `rsync -avzu /sites/[site]/deploy/attachments [destination server]:/sites/[site]/deploy`. You might get a permission denied error. In that case on the destination server run `sudo chown [your user] /sites/[site]/deploy` then try again, if successful change the owner back to tomcat. (If this is a brand new server you may need to set up the backup process for attachments on pandora, see Ben or Matt about that).
 
-* Copy across the relevant cron jobs. You may want to check if there is an amendment archive job, that will be under the oracle user's crontab.
+* Copy across the relevant cron jobs and comment them out on the old server. You may want to check if there is an amendment archive job, that will be under the oracle user's crontab.
 
 * Add an entry for the site under the localhost ip address (127.0.0.1) to `/etc/hosts`.
 
