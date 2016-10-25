@@ -1,4 +1,6 @@
-* Run the [site setup script](https://github.com/skillstream/ssplus/blob/master/scripts/site-setup.sh) as per the instructions on the [markdown](https://github.com/skillstream/ssplus/blob/master/scripts/README.markdown) on the destination server to get the relevant folders ready. Make a note of the entry you need to add to `server.xml`
+* Run the [site setup script](https://github.com/skillstream/ssplus/blob/master/scripts/site-setup.sh) as per the instructions on the [markdown](https://github.com/skillstream/ssplus/blob/master/scripts/README.markdown) on the destination server to get the relevant folders ready. Make a note of the entry you need to add to `server.xml`.
+
+* If the site uses any kind of web service copy across `/etc/.keystore.ssplus-ws`.
 
 **Most of what follows will need to be done out of hours. (Most, not everything).**
 
@@ -19,3 +21,5 @@
 * Deploy the relevant version of the app to the new server.
 
 * Pray it all went to plan.
+
+(You may also want to take into consideration any train sites that were on the old server.
