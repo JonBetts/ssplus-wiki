@@ -20,7 +20,7 @@
 
 * Amend the `live_config` setting in the site's context file to `true`. (This is by default set to `false` by the site setup script to stop any emails being fired before they should).
 
-* Deploy the relevant version of the app to the new server.
+* Update the deploy job in jenkins so going forward they get sent to the new server. Then deploy the relevant version of the app.
 
 * Pray it all went to plan.
 
