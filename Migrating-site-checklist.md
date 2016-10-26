@@ -8,7 +8,7 @@
 
 * If the db needs migrating, create the database on the new server as per the [database setup markdown](https://github.com/skillstream/ssplus/blob/master/database/database-setup.markdown). Take an export of the tablespace on the current server, ship it across to the new one and import.    You will also need to add an entry to iptables to accept connections from the new app server on port 1521: `sudo vim /etc/iptables.rules` and then `sudo iptables-restore < /etc/iptables.rules` to ensure this change is persisted if the server ever needs a reboot.
 
-* Migrate attachments using `rsync -avzu /sites/[site]/deploy/attachments [destination server]:/sites/[site]/deploy`. You might get a permission denied error. In that case on the destination server run `sudo chown [your user] /sites/[site]/deploy` then try again, if successful change the owner back to tomcat. (If this is a brand new server you may need to set up the backup process for attachments on pandora, see Ben or Matt about that).
+* Migrate attachments using `rsync -avzu /sites/[site]/deploy/attachments [destination server]:/sites/[site]/deploy/attachments`. You might get a permission denied error. In that case on the destination server run `sudo chown [your user] /sites/[site]/deploy` then try again, if successful change the owner back to tomcat. (If this is a brand new server you may need to set up the backup process for attachments on pandora, see Ben or Matt about that).
 
 * Copy across the relevant cron jobs and comment them out on the old server. You may want to check if there is an amendment archive job, that will be under the oracle user's crontab.
 
@@ -21,6 +21,8 @@
 * Amend the `live_config` setting in the site's context file to `true`. (This is by default set to `false` by the site setup script to stop any emails being fired before they should).
 
 * Update the deploy job in jenkins so going forward they get sent to the new server. Then deploy the relevant version of the app.
+
+* Update `/etc/hosts` on phobos so that the selenium monitor now checks the site on the new server.
 
 * Pray it all went to plan.
 
