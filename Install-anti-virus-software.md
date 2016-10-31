@@ -1,0 +1,1 @@
+ install clamav-daemon (see ssplus/extras/clamd-install-ubuntu.txt) or add the LAN clamhost to /etc/hosts
