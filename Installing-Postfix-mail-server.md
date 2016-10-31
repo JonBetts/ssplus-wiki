@@ -1,6 +1,6 @@
 --Already applied via chef
 
-First of all, add the server’s IP address to the list of Outbound mail servers under the Connections tab of the DEFAULT policy in the Email Security section of the Websense portal
+First of all, add the server’s IP address to the list of Outbound mail servers under the Connections tab of the DEFAULT policy in the Email Security section of the [Websense Portal](https://www.mailcontrol.com/portal/)
 
 `sudo apt-get install postfix bsd-mailx`
 To use a relay or ‘smart’ host, specify cust32998-s.out.mailcontrol.com as the relayhost (if not done during installation prompts, you can edit `/etc/postfix/main.cf` and add the line `relayhost = cust32998-s.out.mailcontrol.com`, then restart postfix).
