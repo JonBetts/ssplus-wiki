@@ -14,6 +14,8 @@
 
 * Add an entry for the site under the localhost ip address (127.0.0.1) to `/etc/hosts`.
 
+* Add an entry into the server's nginx config: In `/etc/nginx/sites-available` you'll see the different files for each site on the server. In most cases you should just be able to copy one of the existing ones and then amend as needed for the new site. You will need to create a symlink for your new file in `/etc/nginx/sites-enabled`, then run `sudo service nginx reload`.
+
 * Log into easyDNS and update the DNS entry.
 
 * On the old server, comment out the site's entry in `server.xml` and then `sudo mv /sites/[site] /sites/_old`. You can now start up tomcat on the old server.
