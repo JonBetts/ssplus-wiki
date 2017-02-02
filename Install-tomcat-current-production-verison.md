@@ -1,1 +1,0 @@
-https://github.com/skillstream/ssplus/blob/master/extras/tomcat%207.0%20setup%20notes.txt
