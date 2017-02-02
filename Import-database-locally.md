@@ -30,6 +30,7 @@ sudo usermod -aG oinstall $USER
 *N.B. for some installations (e.g. on garfield) you need to add yourself to the `dba` group instead/as well*
 
 2. Add the [export-db](https://github.com/skillstream/ssplus/blob/master/database/scripts/export-db) script to the bin folder located in your user directory.
+  * modify the ORACLE_HOME to the correct oracle version for the database.
 
 Locally
 -------
