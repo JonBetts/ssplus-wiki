@@ -1,1 +1,0 @@
-https://github.com/skillstream/ssplus/blob/master/database/Installing%20Oracle%2010g%20on%20Ubuntu.sh
