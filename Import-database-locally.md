@@ -136,6 +136,6 @@ Once downloaded refer to the `create-db` above to import the file locally.
 
 N.B. Following assumptions are made
 ===================================
-1. If using **Method 2**, you can't use ctrl + c to cancel exporting a table e.g. amnddets or alike.
+1. If using **Method 1**, you can't use ctrl + c to cancel exporting a table e.g. amnddets or alike.
 2. The user locally should also be the user remotely, although modification to the script will allow this to work.
 3. This script also assumes you have the vagrant setup from current Vagrantfile on master
