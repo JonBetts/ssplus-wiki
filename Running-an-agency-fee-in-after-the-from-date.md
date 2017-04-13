@@ -45,6 +45,8 @@ SELECT *
  WHERE fee_type_id = 2 -- procurement
  ORDER BY agency_fees.id desc;
 ```  
+
+Login into system as admin and then replace url with the following.
 http://temps.hsbc.qat.skillstream.net/ssplus/s3/agencyFees/run/41
 
 * remove the number at the end of the above url and replace with the new inserted value.
