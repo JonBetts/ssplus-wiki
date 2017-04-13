@@ -64,3 +64,13 @@ SELECT count(*)
 * (If there are results then these haven't successfully been processed. If there are remaining offers then hit the url again to run the remaining candidates.)
 
 * Once complete a blank agency fees page will load with a success message.
+
+### Update any successfully runs to allow the auto process to trigger
+``` sql
+UPDATE offers
+   SET fee_applied = 'N'; -- reset any previous runs.
+UPDATE offers
+   SET fee_applied = 'Y' 
+ WHERE offers.job_id IN (SELECT job_id FROM job_order WHERE job_type_id = 1) ;
+--Removes perm roles from process
+```
