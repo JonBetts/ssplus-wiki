@@ -30,14 +30,14 @@ SELECT *
 
 UPDATE agency_fees
    SET applied_to = trunc(sysdate) - 1
- WHERE id = 39;
+ WHERE id = :agencyFeeId;
 
 INSERT INTO agency_fees (id, fee_type_id, fee_as, amount, applied_from, discipline_unit_id)
 VALUES (agency_fees_id_seq.nextval, 2, 'PERCENTAGE', 0.17, TRUNC(SYSDATE), 1);
 ```
 
 * Update the url below to relate to the new fee 
-```
+``` sql
 -- Get the agency fee to trigger the run below
 SELECT * 
   FROM agency_fees
