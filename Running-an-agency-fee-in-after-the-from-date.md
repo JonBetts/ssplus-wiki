@@ -4,10 +4,11 @@ If you create an agency fee and the from date is in the past the automatic orp c
 ``` sql
 UPDATE offers
    SET fee_applied = 'N'; -- reset any previous runs.
+--the below is optional based on what job types there are
 UPDATE offers
    SET fee_applied = 'Y' 
  WHERE offers.job_id IN (SELECT job_id FROM job_order WHERE job_type_id = 1) ;
---Removes perm roles from process
+--Removes perm roles from process for HSBC. 
 ```
 * The update above marks the offers for permenant jobs with y as already updated, because these interfere with the processing of the agency fees.
 
