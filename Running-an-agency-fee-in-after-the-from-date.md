@@ -52,7 +52,7 @@ SELECT *
 ```  
 
 Login into system as admin and then replace url with the following.
-http://temps.hsbc.qat.skillstream.net/ssplus/s3/agencyFees/run/41
+http://[url]/[app]/s3/agencyFees/run/[agencyFeeId]
 
 * remove the number at the end of the above url and replace with the new inserted value.
 
