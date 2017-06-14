@@ -41,7 +41,6 @@ INSERT INTO agency_fees (id, fee_type_id, fee_as, amount, applied_from, discipli
 VALUES (agency_fees_id_seq.nextval, :feeTypeId, 'PERCENTAGE', 0.17, TRUNC(SYSDATE), 1);
 ```
 
-* Update the url below to relate to the new fee 
 ``` sql
 -- Get the agency fee to trigger the run below
 SELECT * 
@@ -51,10 +50,8 @@ SELECT *
  ORDER BY agency_fees.id desc;
 ```  
 
-Login into system as admin and then replace url with the following.
-http://[url]/[app]/s3/agencyFees/run/[agencyFeeId]
-
-* remove the number at the end of the above url and replace with the new inserted value.
+* Login into system as admin and then run this URL for the relevant site and fee id.
+`http://[url]/[app]/s3/agencyFees/run/[agencyFeeId]`
 
 ### Run this statement to check all fees have been run in:
 
