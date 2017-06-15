@@ -16,19 +16,23 @@ UPDATE offers
 ``` sql
 SELECT COUNT (*)
   FROM offers
- WHERE fee_applied = 'N';
+ WHERE fee_applied = 'N'
+  --AND ltd_co = 'N';
 ```
 
-* Make note of that number. 21699
+* Make note of that number.
 * (If the updater times out, or something goes wrong, a number of offers will certainly have been updated, and you can confirm that by running the SELECT statement again, and run the updater again to continue.)
 
 ### Close agency fee off and insert new fee into database.
 * update database to close off and insert new fee
+
+The fee code can be **`'apprenticeship'`**, **`'pension'`**, **`'procurement_fee'`**, we have others but they aren't current supported by the updater.
+
 ``` sql
 SELECT *
   FROM agency_fee_types
   JOIN agency_fees ON agency_fees.fee_type_id = agency_fee_types.id
- WHERE code = 'procurement_fee'
+ WHERE code = :fee_code
  ORDER BY applied_from desc;
 
 --Take note of the procurement_fee agency_fee_type_id
@@ -38,7 +42,7 @@ UPDATE agency_fees
  WHERE id = :agencyFeeId;
 
 INSERT INTO agency_fees (id, fee_type_id, fee_as, amount, applied_from, discipline_unit_id)
-VALUES (agency_fees_id_seq.nextval, :feeTypeId, 'PERCENTAGE', 0.17, TRUNC(SYSDATE), 1);
+VALUES (agency_fees_id_seq.nextval, :feeTypeId, :feeTypePERCENTAGEorFEE, :feeAmount, TRUNC(SYSDATE), 1);
 ```
 
 ``` sql
@@ -46,7 +50,7 @@ VALUES (agency_fees_id_seq.nextval, :feeTypeId, 'PERCENTAGE', 0.17, TRUNC(SYSDAT
 SELECT * 
   FROM agency_fees
   JOIN agency_fee_types ON agency_fee_types.ID = agency_fees.fee_type_id
- WHERE code = 'procurement_fee'
+ WHERE code = :fee_code
  ORDER BY agency_fees.id desc;
 ```  
 
