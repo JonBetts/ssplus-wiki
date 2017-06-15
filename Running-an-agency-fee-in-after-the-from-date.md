@@ -42,7 +42,7 @@ UPDATE agency_fees
  WHERE id = :agencyFeeId;
 
 INSERT INTO agency_fees (id, fee_type_id, fee_as, amount, applied_from, discipline_unit_id)
-VALUES (agency_fees_id_seq.nextval, :feeTypeId, :feeTypePERCENTAGEorFEE, :feeAmount, TRUNC(SYSDATE), 1);
+VALUES (agency_fees_id_seq.nextval, :feeTypeId, :feeTypePERCENTAGEorFIXED, :feeAmount, TRUNC(SYSDATE), 1);
 ```
 
 ``` sql
