@@ -4,6 +4,7 @@
 3. `sudo usermod -aG tomcat jenkins` (where applicable)
 4. * `sudo vim /etc/sudoers`, if the sudoers file remains readonly you'll need to edit the file using the command `sudo visudo`:
    * Add `jenkins ALL = NOPASSWD: ALL` _OR_ `jenkins ALL=(ALL) NOPASSWD:ALL` (See which format is used in the file)
+   * On a RedHat/CentOS installation you'll need to comment out the following line as well `Defaults requiretty`.
 5. `sudo passwd jenkins`, password: s0uthw4rk
 6. * `sudo su - jenkins`
    * `mkdir .ssh`
