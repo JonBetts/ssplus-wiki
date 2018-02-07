@@ -29,3 +29,5 @@
 * Pray it all went to plan.
 
 (You may also want to take into consideration any train sites that were on the old server).
+
+* Update https://smon.skillstream.co.uk and google docs to reflect the changes
