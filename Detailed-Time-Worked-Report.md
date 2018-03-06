@@ -2,8 +2,7 @@
 ```sql
 select * from snap_shot where snap_shot_id = 3200;
 ```
-
-### Finding the type of the snap ( 6 = Invoice )
+### Finding the type of the snap ( 6 = Invoice )
 
 ```sql
 select * from snap_type;
