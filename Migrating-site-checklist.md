@@ -1,3 +1,4 @@
+* ensure jenkins has been [setup](https://github.com/skillstream/ssplus/wiki/Setting-up-Jenkins-user)
 * Run the [site setup script](https://github.com/skillstream/ssplus/blob/master/scripts/site-setup.sh) as per the instructions on the [markdown](https://github.com/skillstream/ssplus/blob/master/scripts/README.markdown) on the destination server to get the relevant folders ready. Make a note of the entry you need to add to `server.xml`.
 
 * If the site uses any kind of web service copy across `/etc/.keystore.ssplus-ws`.
