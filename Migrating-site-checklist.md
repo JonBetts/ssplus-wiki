@@ -32,3 +32,6 @@
 (You may also want to take into consideration any train sites that were on the old server).
 
 * Update https://smon.skillstream.co.uk and google docs to reflect the changes
+
+Remove the certificate from auto renewal on the old server.
+https://github.com/skillstream/chef-kitchen/wiki/certbot---remove-a-certificate
