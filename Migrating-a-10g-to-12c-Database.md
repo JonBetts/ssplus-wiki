@@ -18,4 +18,4 @@
 2. Drop the existing tablespace and re import a fresh copy of the db
 3. Start tomcat up on production app server and ensure db updates have been completed
 4. Ensure [RMAN Backups](https://github.com/skillstream/ssplus/blob/master/database/Oracle-backup-config.markdown#backup) are up and running and config the back up server to pick up the new changes
-5. Ensure RMAN is no longer backup up the old db on the old server and remove old backup once new backup has been made correctly.
+5. Ensure RMAN is no longer backup up the old db on the old server and remove old backup from sycorax once new backup has been made correctly.
