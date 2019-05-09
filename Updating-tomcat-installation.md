@@ -18,6 +18,7 @@
 1. `./configure --prefix=/home/tomcat/apache-tomcat-8.5.27 --with-ssl=/usr/include/openssl --with-java-home=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.151-1.b12.el7_4.x86_64 --with-apr=/usr/local/apr` -- make sure the java version is correct
 1. `make && make install`
 1. `vim $CATALINA_BASE/bin/setenv.sh` --ensuring any settings are correct
+1. Add `export UMASK="0002"` to `setenv.sh` (as of tomcat 8.5 apache have increased security of files created by tomcat by changing the umask to 0027 which stops users outside of the tomcat group viewing files. `0002` is the default where users outside of the group have read permission).
 1. `cd $CATALINA_BASE`
 1. `vim conf/server.xml` and add the entries back in from `old_conf/server.xml`
 1. `vim conf/Catalina/{site}/context.xml.default` to reflect the other changes the upgrade may require, check ssplus.xml default context in sts.
