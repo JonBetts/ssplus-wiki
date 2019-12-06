@@ -23,8 +23,13 @@
 1. `vim conf/server.xml` and add the entries back in from `old_conf/server.xml`
 1. `vim conf/Catalina/{site}/context.xml.default` to reflect the other changes the upgrade may require, check ssplus.xml default context in sts.
 1. logout tomcat user
+### If you are installing on centos
 1. `sudo cp /etc/init.d/tomcat7 /etc/init.d/tomcat8`
 1. `sudo vim /etc/init.d/tomcat8` and update the tomcat version
 1. `sudo ln -sf /etc/init.d/tomcat8 /etc/init.d/tomcat`
 1. `sudo /etc/init.d/tomcat start`
-1. `sudo service nginx restart` - to just restart if you needed to add/update any entries.
+### If you are installing on ubuntu 16.04
+1. `scp keaton:/etc/systemd/system/tomcat.service /etc/systemd/system/tomcat.service`
+
+
+`sudo service nginx restart` - to just restart if you needed to add/update any entries.
