@@ -22,6 +22,17 @@
 1. `cd $CATALINA_BASE`
 1. `vim conf/server.xml` and add the entries back in from `old_conf/server.xml`
 1. `vim conf/Catalina/{site}/context.xml.default` to reflect the other changes the upgrade may require, check ssplus.xml default context in sts.
+1. `vim conf/web.xml` and add the following entry so that jsp's compile against Java 8:
+```
+<init-param>
+  <param-name>compilerSourceVM</param-name>
+  <param-value>1.8</param-value>
+</init-param>
+<init-param>
+  <param-name>compilerTargetVM</param-name>
+  <param-value>1.8</param-value>
+</init-param>
+```
 1. logout tomcat user
 ### If you are installing on centos
 1. `sudo cp /etc/init.d/tomcat7 /etc/init.d/tomcat8`
