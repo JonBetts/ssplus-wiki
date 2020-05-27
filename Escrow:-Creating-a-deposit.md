@@ -14,7 +14,7 @@ and, within the following folders, also delete
 * `extras/` client-specific stuff not related to this client
 * `sql/` everything _except_ `clean/` and `views.sql`
 
-Finally, dump all relevant qat schemas and include those in a separate folder.
+Finally, use the `dwn-db` script to dump all relevant qat schemas and include those in a separate folder.
 
 # Bundle and deposit
 * Archive the deposit you've compiled, e.g.
